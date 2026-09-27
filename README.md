@@ -1,87 +1,43 @@
-#  Financial Health & Debt Recovery Analytics (`i.agora`)
+# Inteligência Comportamental, Simulação de Futuros e RAG Factual para Decisões Financeiras
 
-An end-to-end data science and RAG-grounded analytics notebook designed to evaluate seasonal debt patterns, segment user transaction cohorts, calculate safe budget reduction margins, and deliver personalized financial recovery plans aligned with Central Bank financial education guidelines.
-
----
-
-##  Project Overview
-
-Unplanned seasonal expenses and compounding interest frequently drive household budget deficits. This repository provides an analytical workflow and Generative AI framework designed to restore financial stability through quantitative budget optimization and grounded advisory interactions.
-
-### Key Objectives
-* **Cohort Segmentation:** Identify transaction patterns and user vulnerability to seasonal debt spikes.
-* **Safe Budget Margin Calculation:** Compute non-essential spending reduction thresholds without impacting essential living expenses.
-* **RAG-Grounded Guidance:** Leverage Retrieval-Augmented Generation (RAG) over official financial literacy frameworks to generate compliant, personalized recovery action plans.
+Um notebook de ciência de dados ponta a ponta e análises fundamentadas em RAG (Retrieval-Augmented Generation) projetado para avaliar padrões sazonais de dívidas, segmentar coortes de transações de usuários, calcular margens seguras de redução de orçamento e entregar planos de recuperação financeira personalizados alinhados às diretrizes de educação financeira do Banco Central.
 
 ---
 
-##  Tech Stack
+## Visão Geral do Projeto
 
-* **Language:** Python 3.10+
-* **Data Analysis & Modeling:** `pandas`, `NumPy`, `scikit-learn`
-* **Data Visualization:** `matplotlib`, `seaborn`
-* **Generative AI & RAG:** `LangChain`, Vector Embeddings (FAISS / ChromaDB), Hugging Face / OpenAI APIs
-* **Environment:** Jupyter Notebook / Google Colab
+Despesas sazonais não planejadas e juros compostos frequentemente geram déficits no orçamento familiar. Este repositório fornece um fluxo de trabalho analítico e uma estrutura de Inteligência Generativa projetados para restaurar a estabilidade financeira por meio da otimização quantitativa do orçamento e interações de consultoria fundamentadas.
+
+### Principais Objetivos
+
+* **Segmentação de Coortes:** Identificar padrões de transação e a vulnerabilidade do usuário a picos sazonais de dívidas.
+* **Cálculo de Margem Segura de Orçamento:** Computar limites de redução de gastos não essenciais sem impactar as despesas básicas de sobrevivência.
+* **Orientação Baseada em RAG:** Utilizar Geração Aumentada por Recuperação (RAG) sobre frameworks oficiais de educação financeira para gerar planos de ação de recuperação compatíveis e personalizados.
 
 ---
 
-##  Repository Structure
+## Stack Tecnológica
+
+* **Linguagem:** Python 3.10+
+* **Análise de Dados e Modelagem:** `pandas`, `NumPy`, `scikit-learn`
+* **Visualização de Dados:** `matplotlib`, `seaborn`
+* **IA Generativa & RAG:** `LangChain`, Vector Embeddings (FAISS / ChromaDB), Hugging Face / OpenAI APIs
+* **Ambiente:** Jupyter Notebook / Google Colab
+
+---
+
+## Estrutura do Repositório
 
 ```text
 ├── data/
-│   ├── raw_transactions.csv        # Anonymized user transaction history
-│   └── central_bank_guidelines/   # Reference documentation for RAG grounding
+│   ├── raw_transactions.csv        # Histórico de transações de usuários anonimizado
+│   └── central_bank_guidelines/    # Documentação de referência para o aterramento RAG
 ├── notebooks/
-│   └── financial_health_analysis.ipynb  # Primary analytics and modeling notebook
+│   └── financial_health_analysis.ipynb  # Notebook principal de análises e modelagem
 ├── src/
-│   ├── cohort_analysis.py          # Customer profiling & transaction metrics
-│   ├── margin_calculator.py        # Safe budget reduction algorithms
-│   └── rag_pipeline.py             # RAG chain setup, embeddings, and prompt guardrails
-├── requirements.txt
-└── README.md
-
-Assuming this is for the **i.agora Financial Health & Budget Analytics** notebook, here is a complete, production-ready `README.md` formatted for GitHub. *(If you need this tailored to the Energy Market Forecasting or Logistics Optimization notebook instead, let me know!)*
-
-```markdown
-#  Financial Health & Debt Recovery Analytics (`i.agora`)
-
-An end-to-end data science and RAG-grounded analytics notebook designed to evaluate seasonal debt patterns, segment user transaction cohorts, calculate safe budget reduction margins, and deliver personalized financial recovery plans aligned with Central Bank financial education guidelines.
-
----
-
-##  Project Overview
-
-Unplanned seasonal expenses and compounding interest frequently drive household budget deficits. This repository provides an analytical workflow and Generative AI framework designed to restore financial stability through quantitative budget optimization and grounded advisory interactions.
-
-### Key Objectives
-* **Cohort Segmentation:** Identify transaction patterns and user vulnerability to seasonal debt spikes.
-* **Safe Budget Margin Calculation:** Compute non-essential spending reduction thresholds without impacting essential living expenses.
-* **RAG-Grounded Guidance:** Leverage Retrieval-Augmented Generation (RAG) over official financial literacy frameworks to generate compliant, personalized recovery action plans.
-
----
-
-##  Tech Stack
-
-* **Language:** Python 3.10+
-* **Data Analysis & Modeling:** `pandas`, `NumPy`, `scikit-learn`
-* **Data Visualization:** `matplotlib`, `seaborn`
-* **Generative AI & RAG:** `LangChain`, Vector Embeddings (FAISS / ChromaDB), Hugging Face / OpenAI APIs
-* **Environment:** Jupyter Notebook / Google Colab
-
----
-
-##  Repository Structure
-
-```text
-├── data/
-│   ├── raw_transactions.csv        # Anonymized user transaction history
-│   └── central_bank_guidelines/   # Reference documentation for RAG grounding
-├── notebooks/
-│   └── financial_health_analysis.ipynb  # Primary analytics and modeling notebook
-├── src/
-│   ├── cohort_analysis.py          # Customer profiling & transaction metrics
-│   ├── margin_calculator.py        # Safe budget reduction algorithms
-│   └── rag_pipeline.py             # RAG chain setup, embeddings, and prompt guardrails
+│   ├── cohort_analysis.py          # Perfil de clientes e métricas de transação
+│   ├── margin_calculator.py        # Algoritmos de redução segura de orçamento
+│   └── rag_pipeline.py             # Configuração da cadeia RAG, embeddings e travas de segurança
 ├── requirements.txt
 └── README.md
 
@@ -89,55 +45,55 @@ Unplanned seasonal expenses and compounding interest frequently drive household 
 
 ---
 
-##  Methodology
+## Metodologia
 
-1. **Exploratory Data Analysis & Cohort Profiling**
-* Aggregates recurring fixed vs. discretionary expenditures across user cohorts.
-* Isolates seasonal debt anomalies (e.g., year-end expenses, annual taxes, tuition).
-
-
-2. **Quantitative Debt Recovery Modeling**
-* Computes debt-to-income (DTI) metrics and disposable income flexibility.
-* Dynamically calculates safe reduction margins on non-essential spending categories.
+1. **Análise Exploratória de Dados e Perfil de Coorte**
+* Agrega despesas recorrentes fixas versus discricionárias entre as coortes de usuários.
+* Isola anomalias sazonais de dívida (ex.: despesas de fim de ano, impostos anuais, mensalidades).
 
 
-3. **RAG Knowledge Base & Guardrailed Advice**
-* Embeds regulatory financial education frameworks for verified guidance.
-* Enforces system prompts to ensure transparent, non-predatory financial recommendations.
+2. **Modelagem Quantitativa de Recuperação de Dívidas**
+* Computa métricas de endividamento (DTI) e flexibilidade de renda disponível.
+* Calcula dinamicamente margens de redução segura em categorias de gastos não essenciais.
+
+
+3. **Base de Conhecimento RAG & Orientações Protegidas (Guardrails)**
+* Incorpora frameworks regulatórios de educação financeira para orientação verificada.
+* Aplica prompts de sistema para garantir recomendações financeiras transparentes e não predatórias.
 
 
 
 ---
 
-##  Quick Start
+## Guia de Início Rápido (Quick Start)
 
-### 1. Prerequisites
+### 1. Pré-requisitos
 
-Ensure Python 3.10 or higher is installed on your system.
+Certifique-se de que o Python 3.10 ou superior está instalado em seu sistema.
 
-### 2. Installation
+### 2. Instalação
 
-Clone this repository and install the dependencies:
+Clone este repositório e instale as dependências:
 
 ```bash
-git clone [https://github.com/your-username/financial-health-analytics.git](https://github.com/your-username/financial-health-analytics.git)
+git clone https://github.com/your-username/financial-health-analytics.git
 cd financial-health-analytics
 pip install -r requirements.txt
 
 ```
 
-### 3. Environment Setup
+### 3. Configuração do Ambiente
 
-Create a `.env` file in the root directory and add your API keys if running the RAG pipeline:
+Crie um arquivo `.env` no diretório raiz e adicione suas chaves de API caso esteja executando o pipeline RAG:
 
 ```env
 OPENAI_API_KEY=your_openai_api_key_here
 
 ```
 
-### 4. Running the Notebook
+### 4. Executando o Notebook
 
-Start Jupyter Lab and open the main analysis notebook:
+Inicie o Jupyter Lab e abra o notebook principal de análise:
 
 ```bash
 jupyter lab notebooks/financial_health_analysis.ipynb
@@ -145,22 +101,3 @@ jupyter lab notebooks/financial_health_analysis.ipynb
 ```
 
 ---
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome. Feel free to open an issue or submit a pull request.
-
----
-
-
-```
-
-
-
-
-
-
-
-
-
-
